@@ -3,8 +3,8 @@
         "rows": 3,
         "cols": 3,
         "data": [
-            [1138.1864, 0.0, 963.57543945],
-            [0.0, 1137.58154297, 611.544861],
+            [607.0327758789062, 0.0, 513.9069213867188],
+            [0.0, 606.710205078125, 262.1572570800781],
             [0.0, 0.0, 1.0]
         ]
     },
@@ -19,42 +19,52 @@
         ]
     },
     "T_lidar_to_cam": {
-        "rows": 3,
+        "rows": 4,
         "cols": 4,
         "data": [
             [-1, 0, 0, -0.10795],
             [0, 0, -1, -0.053975],
-            [0, -1, 0, 0]
+            [0, -1, 0, 0],
+            [0, 0, 0, 1]
         ]
     },
     "T_lidar_to_cam_gt": {
         "available": false
     },
-    "img_folder": "/CalibAnything/data/example_data/images/",
-    "mask_folder": "/CalibAnything/data/example_data/masks/",
-    "pc_folder": "/CalibAnything/data/example_data/pc/",
-    "img_format": ".png",
+    "img_folder": "images",
+    "mask_folder": "masks",
+    "pc_folder": "pc",
+    "img_format": ".jpg",
     "pc_format": ".pcd",
     "file_name": [
-        "00000"
+        "0000",
+        "0001",
+        "0002",
+        "0003",
+        "0004",
+        "0005",
+        "0006",
+        "0007"
     ],
-    "min_plane_point_num": 2000,
-    "cluster_tolerance": 0.25,
-    "search_num": 5000,
-    "search_range": {
-        "rot_deg": 5,
-        "trans_m": 0.5
-    },
-    "point_range": {
-        "top": 0.0,
-        "bottom": 1.0
-    },
-    "down_sample": {
-        "is_valid": false,
-        "voxel_m": 0.1
-    },
-    "thread": {
-        "is_multi_thread": false,
-        "num_thread": 0
+    "params": {
+        "min_plane_point_num": 2000,
+        "cluster_tolerance": 0.25,
+        "search_num": 1000,
+        "search_range": {
+            "rot_deg": 5,
+            "trans_m": 0.5
+        },
+        "point_range": {
+            "top": 0.0,
+            "bottom": 1.0
+        },
+        "down_sample": {
+            "is_valid": true,
+            "voxel_m": 0.05
+        },
+        "thread": {
+            "is_multi_thread": true,
+            "num_thread": 4
+        }
     }
 }
