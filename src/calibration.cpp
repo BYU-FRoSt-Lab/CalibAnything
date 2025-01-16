@@ -103,7 +103,7 @@ void Calibrator::ProcessPointcloud(const pcl::PointCloud<pcl::PointXYZI>::Ptr pc
 
         pcl::PointCloud<pcl::PointXYZI>::Ptr cloud_tmp(new pcl::PointCloud<pcl::PointXYZI>);
         pcl::PointCloud<pcl::PointXYZI>::Ptr cloud_tmp_ds(new pcl::PointCloud<pcl::PointXYZI>);
-        float kLeafSize = 0.1;
+        float kLeafSize = params_.down_sample_voxel; // 0.1
         pcl::VoxelGrid<pcl::PointXYZI> filter_map;
         filter_map.setLeafSize(kLeafSize, kLeafSize, kLeafSize);
         cloud_downsampled->clear();
