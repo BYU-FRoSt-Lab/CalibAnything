@@ -9,8 +9,14 @@
         ]
     },
     "cam_dist": {
-        "cols": 4,
-        "data": [0.0, 0.0, 0.0, 0.0]
+        "cols": 14,
+        "data": [
+            2.5341603755950928, -2.9557416439056396, -0.0003312704211566597, -0.0004033033037558198,
+            1.7105742692947388, 
+            2.47755765914917, -2.8600361347198486, 1.694322109222412, 
+            0.0, 0.0, 0.0, 0.0, 
+            0.003867920720949769, 0.001242463244125247
+        ]
     },
     "T_lidar_to_cam": {
         "rows": 3,
@@ -32,13 +38,23 @@
     "file_name": [
         "00000"
     ],
-    "min_plane_point_num": 1500,
-    "cluster_tolerance": 1,
-    "search_num": 10,
-    "search_range": 0.5,
-    "point_range": 1.0,
-    "down_sample": {
-        "is_valid": false
+    "min_plane_point_num": 2000,
+    "cluster_tolerance": 0.25,
+    "search_num": 5000,
+    "search_range": {
+        "rot_deg": 5,
+        "trans_m": 0.5
     },
-    "thread": 1
+    "point_range": {
+        "top": 0.0,
+        "bottom": 1.0
+    },
+    "down_sample": {
+        "is_valid": false,
+        "voxel_m": 0.1
+    },
+    "thread": {
+        "is_multi_thread": false,
+        "num_thread": 0
+    }
 }
