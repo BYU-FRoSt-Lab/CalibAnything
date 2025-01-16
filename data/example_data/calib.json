@@ -1,0 +1,44 @@
+{
+    "cam_K": {
+        "rows": 3,
+        "cols": 3,
+        "data": [
+            [1138.1864, 0.0, 963.57543945],
+            [0.0, 1137.58154297, 611.544861],
+            [0.0, 0.0, 1.0]
+        ]
+    },
+    "cam_dist": {
+        "cols": 4,
+        "data": [0.0, 0.0, 0.0, 0.0]
+    },
+    "T_lidar_to_cam": {
+        "rows": 3,
+        "cols": 4,
+        "data": [
+            [-1, 0, 0, -0.10795],
+            [0, 0, -1, -0.053975],
+            [0, -1, 0, 0]
+        ]
+    },
+    "T_lidar_to_cam_gt": {
+        "available": false
+    },
+    "img_folder": "/CalibAnything/data/example_data/images/",
+    "mask_folder": "/CalibAnything/data/example_data/masks/",
+    "pc_folder": "/CalibAnything/data/example_data/pc/",
+    "img_format": ".png",
+    "pc_format": ".pcd",
+    "file_name": [
+        "00000"
+    ],
+    "min_plane_point_num": 1500,
+    "cluster_tolerance": 1,
+    "search_num": 10,
+    "search_range": 0.5,
+    "point_range": 1.0,
+    "down_sample": {
+        "is_valid": false
+    },
+    "thread": 1
+}
