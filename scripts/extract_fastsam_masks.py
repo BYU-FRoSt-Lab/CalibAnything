@@ -11,7 +11,7 @@ def main(args):
     bgr_img = cv2.imread(args.img_filepath)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    model_path = '/FastSAM/FastSAM.pt'
+    model_path = '/FastSAM.pt'
     fastsam_model = FastSAM(model_path)
 
     everything_results = fastsam_model(
